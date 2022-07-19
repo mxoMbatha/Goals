@@ -1,23 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Set from './components/Set';
+import Goals from './components/Goals';
+import { useState } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+function App()
+{
+   const [goals,setGoals]=useState([
+    {
+    id: 1,
+    text: 'finish my first react project',
+    reminder: true,
+    },
+    {
+    id: 2,
+    text: 'Build a django voting app',
+    reminder: true,
+    
+    },
+    {
+    id: 3,
+    text: 'Biuld and deploy my portfolio website with django and react',
+    reminder: false,
+    }
+    
+   ]
+   )
+   return (
+    <div className="container">
+       <Header />
+         <Goals goals={ goals } />
+         <Set /> 
     </div>
   );
 }

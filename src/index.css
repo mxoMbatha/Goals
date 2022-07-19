@@ -1,3 +1,8 @@
+:root{
+  --primary-color:rgb(42, 42, 104);
+  --text-color:aliceblue;
+  --border-radius:4px
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +12,81 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container{
+  background-color: var(--primary-color);
+  max-width: 600px;
+  margin: 30px auto;
+  overflow:auto;
+  min-height: 550px;
+  border-radius: 3px;
+  box-shadow: 0 50px 100px -20px rgba(50,50,93,0.25),0px 30px 60px -30px rgba(10,37,64,0.35);
+  padding: 1.5rem;
+
+}
+.header{
+  text-align:center;
+
+}
+.header h1{
+border: 2px #fff solid;
+padding:6px 0px 10px;
+color: var(--text-color);
+border-radius: 3px;
+}
+.header p{
+  padding-top: 1rem;
+  font-size: 15px;
+  color: rgba(245, 245, 245, 0.521);
+  font-style:oblique;
+}
+.header p span{
+  font-style:normal;
+  font-size:13px;
+  font-weight: 600;
+}
+.set-goals{
+  display: flexbox;
+}
+.btn{
+  margin: 1.5rem auto;
+  padding: .5rem ;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  color: rgb(42, 42, 104);
+
+}
+.all-goals{
+  display: grid;
+  border: 1px solid rgba(255, 255, 255, 0.103);
+  padding: 2rem;
+  gap: 5px;
+  margin-top: 2rem;
+}
+._goal{
+  padding:1rem .5rem;
+  color:#fff;
+  background: rgba(111, 94, 211, 0.356);
+  z-index: 3;
+  border-radius: 4px;
+  color: var(--text-color);
+}
+._goal h4{
+  display: flex;
+    justify-content: space-between;
+    padding-left: .5rem;
+}
+.trash-icon{
+  border: 1px solid rgba(250,250,250,0.345);
+  text-align: center;
+  display:grid;
+  place-content: center;
+  padding: 10px;
+}
+.trash-icon svg{
+  padding: .5px;
 }
