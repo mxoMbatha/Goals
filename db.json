@@ -1,0 +1,28 @@
+{
+  "goals": [
+    {
+      "id": 1,
+      "text": "Finish my first react project",
+      "reminder": false,
+      "date": "2022-07-25",
+      "term": "short-term",
+      "time": "07:00"
+    },
+    {
+      "id": 2,
+      "text": "Build a django voting app",
+      "reminder": true,
+      "date": "2022-09-01",
+      "term": "short-term",
+      "time": "20:00"
+    },
+    {
+      "id": 3,
+      "text": "Biuld my portfolio website with django and react",
+      "reminder": true,
+      "date": "2023-09-12",
+      "term": "long-term",
+      "time": "10:00"
+    }
+  ]
+}

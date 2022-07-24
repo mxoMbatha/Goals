@@ -1,11 +1,33 @@
-import  { FaTrashAlt } from 'react-icons/fa'
-const Goal = ({ goal }) =>
+import {  FaTrashAlt } from 'react-icons/fa'
+const Goal = ({ goal,onAchieve,onReminder,onDelete }) =>
 {
-  return (
-      <div className='_goal'>
-          <h4>{goal.text} <span className='trash-icon'><FaTrashAlt style={{color:'red',cursor:'pointer'}}/></span></h4>
+ 
+ return (
+    <div
+      className={ `_goal ${goal.achieved ? 'achieved' : ''} ` }
+      style={ goal.reminder ? { borderLeft: '4px solid red' } : {} }
+      onDoubleClick={ () => { onReminder(goal.id) } }
+    >
+      <p contentEditable={false}><span>
+        <input type="checkbox" name="achieved" id="achieved" onChange={ () =>
+      {
+        onAchieve(goal.id)
+        } } />{ goal.text }
+      </span>
+        <span className='icon'>
+          <FaTrashAlt onClick={ () => { onDelete(goal.id) } } />
+        </span>
+      </p>
+     <p className='date-time'>
+       <span> { goal.date }</span>
+       <span className='time'>{ goal.time }{
+       `${parseInt((goal.time).substring(0, 2)) > 12 ? ' pm' : ' am'}`
+     }</span></p>
+      { <p className='achieved-text' style={ goal.achieved ? {border: '1px solid'} : { display: 'none' } }>{ goal.achieved }</p>
+      }
     </div>
   )
 }
+
 
 export default Goal
