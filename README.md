@@ -1,4 +1,48 @@
-# Getting Started with Create React App
+# Goals
+
+## Table of contents
+* [General Info](#general-info)
+* [Screenshots](##Screenshots)
+* [Technologies](#technologies)
+* [Mobile Support](#mobile-support)
+* [Development](#development)
+* [To-do](#to-do)
+* [Inspiration](#inspiration)
+
+
+# General Info
+
+This is a web app for organising your life and getting your priorities straight. More than a to-do list Goals helps setting goals for the day, month and long-term life goals.Set your goal and a timeframe and jugde your efficiency of your achivements
+
+## Screenshots
+
+# Technologies
+
+This project is created with :
+* React JS
+* Sass
+* Json-server
+* Node JS
+* Inspiratinal-qoutes JS 
+* Fetch API
+
+# Mobile Support
+
+Goals is very much mobile-responsive,compatible with all devices of various sizes nad consistent improvements are being made
+
+
+# Development
+
+Want to contribute? Awesome!
+
+To fix a bug or enhance an existing module, follow these steps:
+
+* fork the Goals repo
+* Create a new Branch (```git checkout -b improve-feature```)
+* Make your appropriate changes in files
+* Commit your changes
+* Push to the branch (```git push origin improve-feature ```)
+* Create a Pull Request
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -29,42 +73,10 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+# To-do
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Add modals and animations
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Inspiration
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Goals is inspired by the Task-Tracker App by Travesy Media
