@@ -8,7 +8,8 @@ const Footer = () =>
     return (
         <div className='footer'>
             <footer>
-                <p>All rights reserved   &copy; { thisYear }  <a href="\">Mxolisi Mbatha</a></p>
+                <p> &copy; { thisYear } <a href="\">Goals</a>. All rights reserved. </p>
+                <p>  By <a href="\">Mxolisi Mbatha</a></p>
             </footer>
     </div>
   )

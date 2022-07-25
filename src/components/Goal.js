@@ -5,7 +5,7 @@ const Goal = ({ goal,onAchieve,onReminder,onDelete }) =>
  return (
     <div
       className={ `_goal ${goal.achieved ? 'achieved' : ''} ` }
-      style={ goal.reminder ? { borderLeft: '4px solid red' } : {} }
+      style={ goal.reminder ? { borderLeft: '4px solid rgb(255, 72, 0)' } : {} }
       onDoubleClick={ () => { onReminder(goal.id) } }
     >
       <p contentEditable={false}><span>

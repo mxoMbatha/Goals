@@ -11,7 +11,7 @@
     {
       "id": 2,
       "text": "Build a django voting app",
-      "reminder": true,
+      "reminder": false,
       "date": "2022-09-01",
       "term": "short-term",
       "time": "20:00"

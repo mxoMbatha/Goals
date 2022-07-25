@@ -1,18 +1,15 @@
 $primary-color: aliceblue;
-$text-color: rgb(42, 42, 104);
+$text-color: rgb(36, 70, 84);
 $border-radius: 4px;
 $over-color:rgba(255, 255, 255, 0.527);
 $box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25) inset,
  0px 30px 60px -30px rgba(10, 37, 64, 0.35) inset;
+$secondary-color: rgb(255, 72, 0);
 
 
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #fff;
 }
 
@@ -34,7 +31,7 @@ a {
 }
 
 a:hover {
-    color: lighten($text-color, $amount: 50%);
+    color: $secondary-color;
 
 }
 
@@ -95,7 +92,7 @@ nav {
         }
 
         a:hover {
-            color: lighten($text-color, $amount: 50%);
+            color: $secondary-color;
         }
 
         .head-logo {
@@ -181,7 +178,7 @@ nav {
             align-items: center;
 
             svg:hover {
-                color: rgba(111, 94, 211, 0.726)
+                color: $secondary-color
             }
         }
     }
@@ -214,13 +211,17 @@ nav {
     padding: 5px 5px;
     text-decoration: none;
     display: block;
-    font-size: 12px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 500;
 
 }
 
 .dropdown a:hover {
-    background-color: #fff;
+    color:$secondary-color;
+    border: 1px solid rgba(255, 255, 255, 0.411);
+    border-left: none;
+    border-right:none ;
+    
 }
 
 .show {
@@ -242,7 +243,7 @@ nav {
 }
 
 .btn:hover {
-    color: $over-color
+    color: $secondary-color
 }
 
 .box {
@@ -273,7 +274,7 @@ nav {
 
     label {
         padding: 6px 2px 0;
-        font-weight: 800;
+        font-weight: 700;
         font-size: 14px
     }
     input{
@@ -299,7 +300,7 @@ nav {
      #reminder {
         display: flex;
         align-items: flex-end;
-        margin-left: 90%;
+        margin-left: 93%;
         width:min-content
 
     }
@@ -343,7 +344,7 @@ nav {
 
                 svg {
                     padding: .5px;
-                    color: red;
+                    color:$secondary-color;
                 }
 
                 svg:hover {
@@ -356,7 +357,7 @@ nav {
             gap:1rem;
             margin-left: 1.8rem;
             font-weight:400;
-            color:lighten($color: rgb(0, 0, 0), $amount:25%);
+            color:lighten($color: rgb(0, 0, 0), $amount:40%);
             font-size: 13px;
             line-height: normal;
         } 
@@ -370,24 +371,41 @@ nav {
         }
     }
 }
+.about{
+    margin-top: 2rem;
+    text-align: center;
+    display: grid;
+    gap: 2rem;
+    .last-qoute{
+        font-size: x-large;
+        padding: 2rem;
+        color:$secondary-color;
+        font-weight:600;
+        margin-top:2rem
+    }
+}
 //footer
 .footer {
+    
     overflow: hidden;
     padding: 1rem;
     text-align: center;
-    text-transform: lowercase;
-    background-color: $primary-color;
+    text-transform: capitalize;
+    background-color: $text-color;
     max-width: 700px;
     margin: 30px auto 0px;
     border-radius: 2px;
-    color: $text-color;
+    color: $primary-color;
     font-size: 13px;
-    box-shadow: 0 5px 10px -2px rgba(50, 50, 93, 0.25) inset,
-        0px 3px 6px -3px rgba(10, 37, 64, 0.35) inset;;
-
+    box-shadow: 0 5px 10px -2px rgba(216, 216, 226, 0.25) inset,
+        0px 3px 6px -3px rgba(132, 136, 139, 0.35) inset;
+    footer{
+        display: grid;
+            gap: .5rem;
+    }    
     a {
-
-        text-transform: lowercase;
+      
+        color:$secondary-color
     }
 }
 
@@ -425,6 +443,7 @@ nav {
     }
 }
 }
+
 @media (max-width:265px) {
     .container{
         padding:2px;

@@ -21,7 +21,7 @@ const Set = ({ onSet,dropDown,onDropDown }) =>
             
         </div>
        </div>
-        <Button color={ `${displaySet ? 'red' : ''}` } text={ `${displaySet ? 'close' : 'set a goal'}` } onClick={ () => { setDisplaySet(!displaySet); } } />
+        <Button color={ `${displaySet ? 'rgb(255, 72, 0)' : ''}` } text={ `${displaySet ? 'close' : 'set a goal'}` } onClick={ () => { setDisplaySet(!displaySet); } } />
       </div>
       { displaySet && <SetGoal onSet={ onSet } />
       }    
