@@ -20,7 +20,7 @@ const Header = ({  qoutes  }) =>
     return (
       <header className='header'>
             <h1>{useLocation().pathname==='/about'? 'About': 'Goals' } </h1>
-            {useLocation().pathname==='/' && <Qoute  qoute={ qoute } /> }
+            {useLocation().pathname!='/about' && <Qoute  qoute={ qoute } /> }
             
          
       </header>

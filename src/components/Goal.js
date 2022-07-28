@@ -21,7 +21,7 @@ const Goal = ({ goal,onAchieve,onReminder,onDelete }) =>
      <p className='date-time'>
        <span> { goal.date }</span>
        <span className='time'>{ goal.time }{
-       `${parseInt((goal.time).substring(0, 2)) > 12 ? ' pm' : ' am'}`
+       `${parseInt((goal.time).substring(0, 2)) >= 12 ? ' pm' : ' am'}`
      }</span></p>
       { <p className='achieved-text' style={ goal.achieved ? {border: '1px solid'} : { display: 'none' } }>{ goal.achieved }</p>
       }

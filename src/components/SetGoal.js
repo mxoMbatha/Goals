@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-const SetGoal = ({ onSet }) =>
+const SetGoal = ({ onSet , onDisplaySet}) =>
 {
     const [text, setGoaltext] = useState('');
     const [reminder, setReminder] = useState(false);
@@ -22,8 +22,42 @@ const SetGoal = ({ onSet }) =>
             setReminder(false);
             setTerm('')
             setTime('')
+            alert('Your goal has been successfully set')
+            onDisplaySet()
         } 
     }
+    const onTimeSkip = (e) =>
+    {
+        
+         setTime(e.target.value);
+    };
+    const onDateSkip = (e) =>
+    {
+        let myterm = '';
+        const dateValue = e.target.valueAsDate;
+        const dates = new Date()
+        const thisDay = dates.getDate(), thisMonth = dates.getMonth(), thisYear = dates.getFullYear();
+
+        if (dateValue.getFullYear() < thisYear) {
+
+            alert('You can\'t set your goal back in time. Please contact us if you possess a time machine')
+     
+        }
+        else if (dateValue.getFullYear() === thisYear && dateValue.getMonth() < thisMonth) {
+            alert('You can\'t set your goal back in time. Please contact us if you possess a time machine')
+        }
+        else if (dateValue.getFullYear() === thisYear && dateValue.getMonth() === thisMonth && dateValue.getDate() < thisDay) {
+            alert('You can\'t set your goal back in time. Please contact us if you possess a time machine')
+        }
+        else if (dateValue.getFullYear() > thisYear) {
+            myterm = 'long-term'
+        }
+        else {
+            myterm = 'short-term'
+        }
+        setDate(e.target.value)
+        setTerm(myterm)
+    }; 
   return (
       <>
           <form className="addForm box" onSubmit={ onFormSubmit }>
@@ -33,46 +67,12 @@ const SetGoal = ({ onSet }) =>
               </div>
               <div className="formControl">
                   <label >Date</label>
-                  <input type="date" name="date" id="date" value={ date } onChange={ (e) =>
-                  {
-                      let myterm = '';
-                      const dateValue = e.target.valueAsDate;
-                      const dates = new Date()
-                      const thisDay = dates.getDate(), thisMonth = dates.getMonth(), thisYear = dates.getFullYear();
-
-                      if (dateValue.getFullYear() < thisYear )
-                      {
-
-                          alert(                          'Please contact us if you possess a time machine')
-     
-                      }
-                      else if (dateValue.getFullYear() === thisYear && dateValue.getMonth() < thisMonth)
-                      {
-                          alert(                          'Please contact us if you possess a time machine')
-                      }
-                      else if(dateValue.getFullYear()=== thisYear &&dateValue.getMonth()===thisMonth && dateValue.getDate() < thisDay) {
-                           alert(                          'Please contact us if you possess a time machine')
-                      }
-                      else if(dateValue.getFullYear()>thisYear) {
-                          myterm='long-term'
-                          }
-                      else {
-                          myterm='short-term'
-                      }
-                      setDate(e.target.value);
-                      console.log({ date })
-                      setTerm(myterm)
-                      console.log(dateValue)
-                  } } />
+                  <input type="date" name="date" id="date" value={ date } onChange={ onDateSkip} />
               </div>
              
               <div className="formControl">
                   <label >Time</label>
-                  <input type="time" name="time" id="time" placeholder='time' value={ time }  onChange={ (e) =>
-                  {
-                      setTime(e.target.value)
-                      console.log(`This time-${time}`)
-                  }
+                  <input type="time" name="time" id="time" placeholder='time' value={ time }  onChange={ onTimeSkip
                   } />
               </div>
                <div className="formControl formCheck">

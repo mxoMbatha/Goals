@@ -58,9 +58,12 @@ nav {
             padding-bottom: 1rem;
             color:$text-color
         }
+                p:hover {
+                    color: $secondary-color
+                }
+                }
     
-        
-    }
+    
     .show-nav-list{
         display: block !important;      
     }
@@ -198,7 +201,7 @@ nav {
     display: none;
     position: absolute;
     background-color: $text-color;
-    min-width: 200px;
+    min-width: 150px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 5;
@@ -211,17 +214,13 @@ nav {
     padding: 5px 5px;
     text-decoration: none;
     display: block;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
 
 }
 
 .dropdown a:hover {
     color:$secondary-color;
-    border: 1px solid rgba(255, 255, 255, 0.411);
-    border-left: none;
-    border-right:none ;
-    
 }
 
 .show {
@@ -231,19 +230,20 @@ nav {
 //button
 
 .btn {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 1.5rem 0;
     padding: .5rem;
-    box-shadow: 0px 8px 25px 0px rgba(0, 0, 0, 0.2);    border-radius: 3px;
+    box-shadow: 0px 8px 25px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
     color: $primary-color;
     font-weight: 900;
     border: none;
     cursor: pointer;
-    transition: 800ms;
     background-color: $text-color;
 }
 
 .btn:hover {
-    color: $secondary-color
+    color: lighten($secondary-color, $amount: 10%)
 }
 
 .box {
@@ -313,6 +313,7 @@ nav {
 
     .achieved {
         background: rgba(22, 16, 53, 0.219) !important;
+        font-style:oblique;
     }
 
     ._goal {
@@ -322,7 +323,6 @@ nav {
         z-index: 3;
         border-radius: 4px;
         color: $text-color;
-        transition: 20ms;
 
         p {
             display: flex;
@@ -372,16 +372,23 @@ nav {
     }
 }
 .about{
-    margin-top: 2rem;
+    margin-top: 3rem;
     text-align: center;
     display: grid;
+    align-content: center;
     gap: 2rem;
+    background-color: $text-color;
+    color: $primary-color;
     .last-qoute{
-        font-size: x-large;
-        padding: 2rem;
+        font-size: large;
+        padding: 2rem 2rem .5rem;
         color:$secondary-color;
         font-weight:600;
-        margin-top:2rem
+        margin-top:4rem;
+        a{
+            color:$primary-color;
+            padding:1rem;
+        }
     }
 }
 //footer

@@ -14,21 +14,27 @@
 
 This is a web app for organising your life and getting your priorities straight. More than a to-do list, Goals helps setting goals for the day, month and long-term life goals.Set your goal and a timeframe and jugde your efficiency of your achivements
 
+## features
+
+* Get Inspirational qoutes on every reload
+* Set long-term goals
+* 
+ 
+
 ## Screenshots
 
 # Technologies
 
 This project is created with :
-* React JS
-* Sass
-* Json-server
-* Node JS
-* Inspiratinal-qoutes JS 
-* Fetch API
+* React 18.2.0
+* Sass 8.12.2 
+* Json-server 0.17.0
+* Node.js v18.4.0
+* Inspiratinal-qoutes.js 2.0.1
 
 # Mobile Support
 
-Goals is very much mobile-responsive,compatible with all devices of various sizes nad consistent improvements are being made
+Goals is very much mobile-responsive,compatible with all devices of various sizes and consistent improvements are being made
 
 
 # Development
@@ -38,10 +44,10 @@ Want to contribute? Awesome!
 To fix a bug or enhance an existing module, follow these steps:
 
 * fork the Goals repo
-* Create a new Branch (```git checkout -b improve-feature```)
+* Create a new Branch (`git checkout -b improve-feature`)
 * Make your appropriate changes in files
 * Commit your changes
-* Push to the branch (```git push origin improve-feature ```)
+* Push to the branch (`git push origin improve-feature `)
 * Create a Pull Request
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

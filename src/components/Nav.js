@@ -15,7 +15,8 @@ const Nav = () =>
       <div className="right-items">
         <span className="dots" onPointerOver={()=>{setNavDropDown(!navDropDown);} }><p>...</p></span>
         <ul className={`nav-dropdown ${ navDropDown?'show-nav-list':''}`}>
-        <li><Link to="/about">About</Link></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
         <li><Link  to="/">sign up</Link></li>
       </ul>
       </div>

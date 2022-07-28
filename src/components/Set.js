@@ -1,12 +1,10 @@
 import React from 'react'
 import Button from './Button'
 import SetGoal from './SetGoal'
-import { useState } from 'react'
 import { FaBars } from 'react-icons/fa'
-const Set = ({ onSet,dropDown,onDropDown }) =>
+import { Link } from 'react-router-dom'
+const Set = ({ onSet,dropDown,onDropDown,displaySet,onDisplaySet }) =>
 {
-  const [displaySet, setDisplaySet] = useState(false);
-
   
   return (
     <div className='set-goals'>
@@ -15,15 +13,15 @@ const Set = ({ onSet,dropDown,onDropDown }) =>
         <span className="icon"><FaBars onClick={ onDropDown } />
           </span>
           <div id="myDropdown" className={ `dropdown-content ${dropDown ? 'show' : ''}` }>
-            <a href="#about">Long-term goals</a>
-          <a href="#achieved">Achieved goals</a>
+            <Link to="/longtermgoals">Long-term goals</Link>
+          <Link to="/achievedgoals">Achieved goals</Link>
             <a href="#about">History</a>
             
         </div>
        </div>
-        <Button color={ `${displaySet ? 'rgb(255, 72, 0)' : ''}` } text={ `${displaySet ? 'close' : 'set a goal'}` } onClick={ () => { setDisplaySet(!displaySet); } } />
+        <Button color={ `${displaySet ? 'rgb(255, 72, 0)' : ''}` } text={ `${displaySet ? 'close' : 'set a goal'}` } onClick={ onDisplaySet }  />
       </div>
-      { displaySet && <SetGoal onSet={ onSet } />
+      { displaySet && <SetGoal onSet={ onSet } onDisplaySet={ onDisplaySet } displaySet={ displaySet } />
       }    
     </div>
   )
