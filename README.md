@@ -1,14 +1,15 @@
 # Goals
 
 ## Table of contents
-* [General Info](#general-info)
-* [Screenshots](##Screenshots)
-* [Technologies](#technologies)
-* [Mobile Support](#mobile-support)
-* [Development](#development)
-* [To-do](#to-do)
-* [Inspiration](#inspiration)
 
+- [General Info](#general-info)
+- [Features](## features)
+- [Screenshots](##Screenshots)
+- [Technologies](#technologies)
+- [Mobile Support](#mobile-support)
+- [Development](#development)
+- [To-do](#to-do)
+- [Inspiration](#inspiration)
 
 # General Info
 
@@ -16,26 +17,26 @@ This is a web app for organising your life and getting your priorities straight.
 
 ## features
 
-* Get Inspirational qoutes on every reload
-* Set long-term goals
-* 
- 
+- CRUD goals
+- Get Inspirational qoutes on every reload
+- filter long-term goals
+- Save Achieved goals
 
 ## Screenshots
 
 # Technologies
 
 This project is created with :
-* React 18.2.0
-* Sass 8.12.2 
-* Json-server 0.17.0
-* Node.js v18.4.0
-* Inspiratinal-qoutes.js 2.0.1
+
+- React 18.2.0
+- Sass 8.12.2
+- Json-server 0.17.0
+- Node.js 18.4.0
+- Inspiratinal-qoutes.js 2.0.1
 
 # Mobile Support
 
 Goals is very much mobile-responsive,compatible with all devices of various sizes and consistent improvements are being made
-
 
 # Development
 
@@ -43,12 +44,12 @@ Want to contribute? Awesome!
 
 To fix a bug or enhance an existing module, follow these steps:
 
-* fork the Goals repo
-* Create a new Branch (`git checkout -b improve-feature`)
-* Make your appropriate changes in files
-* Commit your changes
-* Push to the branch (`git push origin improve-feature `)
-* Create a Pull Request
+- fork the Goals repo
+- Create a new Branch (`git checkout -b improve-feature`)
+- Make your appropriate changes in files
+- Commit your changes
+- Push to the branch (`git push origin improve-feature `)
+- Create a Pull Request
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -69,19 +70,9 @@ You may also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 # To-do
 
-* Add modals and animations
+- Add modals and animations
 
 # Inspiration
 

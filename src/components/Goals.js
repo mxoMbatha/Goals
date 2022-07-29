@@ -9,7 +9,7 @@ const Goals = ({ goals, onAchieve, onReminder, onDelete }) =>
   
     return (
       <div className='all-goals box'>
-        { goals.filter((goal)=>goal.term!='long-term').map((goal) =>
+        { goals.filter((goal)=>goal.term!=='long-term' && goal.achieved!=='achieved').map((goal) =>
           <Goal key={ goal.id } goal={goal} onAchieve={onAchieve} onReminder={onReminder} onDelete={onDelete} />
         ).reverse() }
       </div>

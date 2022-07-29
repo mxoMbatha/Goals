@@ -13,8 +13,8 @@ const Set = ({ onSet,dropDown,onDropDown,displaySet,onDisplaySet }) =>
         <span className="icon"><FaBars onClick={ onDropDown } />
           </span>
           <div id="myDropdown" className={ `dropdown-content ${dropDown ? 'show' : ''}` }>
-            <Link to="/longtermgoals">Long-term goals</Link>
-          <Link to="/achievedgoals">Achieved goals</Link>
+            <Link to="/longtermgoals">Long-term </Link>
+          <Link to="/achievedgoals">Achieved </Link>
             <a href="#about">History</a>
             
         </div>

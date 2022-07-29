@@ -3,10 +3,11 @@
     {
       "id": 1,
       "text": "Finish my first react project",
-      "reminder": true,
+      "reminder": false,
       "date": "2022-07-25",
       "term": "short-term",
-      "time": "07:00"
+      "time": "07:00",
+      "achieved": "achieved"
     },
     {
       "id": 2,
@@ -65,6 +66,14 @@
       "term": "long-term",
       "time": "08:40",
       "id": 10
+    },
+    {
+      "text": "Build resume web application: MERN STACK",
+      "date": "2022-10-01",
+      "reminder": true,
+      "term": "short-term",
+      "time": "06:02",
+      "id": 11
     }
   ]
 }

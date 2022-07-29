@@ -11,7 +11,8 @@ const Goal = ({ goal,onAchieve,onReminder,onDelete }) =>
       <p contentEditable={false}><span>
         <input type="checkbox" name="achieved" id="achieved" onChange={ () =>
       {
-        onAchieve(goal.id)
+         onAchieve(goal.id)
+         alert(' Well done! you have successfully achieved your goal')
         } } />{ goal.text }
       </span>
         <span className='icon'>

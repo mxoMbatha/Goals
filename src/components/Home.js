@@ -147,7 +147,7 @@ const Home = () =>
             <Route path='/achievedgoals' exact element={
               <>
                 <Set onSet={ setNewGoal } dropDown={ dropDown } onDropDown={ onListToggle } displaySet={ displaySet } onDisplaySet={ onDisplaySet } />
-              <AchievedGoals goals={ goals } />
+                {  goals.length > 0 ?<AchievedGoals goals={ goals } onDelete={ deleteGoal } /> : 'No achieved goals yet' }
             </> } />
             <Route path='/about' exact element={ <About/> }> </Route>
           </Routes> 
