@@ -46,7 +46,7 @@ nav {
         align-items: center;
         overflow: hidden;
         background-color: transparent;
-        padding: 3rem 3rem 3rem 0rem;
+        padding: .5rem 3rem 3rem 0rem;
         z-index:-1;
 
     .dots{
@@ -245,7 +245,11 @@ nav {
 .btn:hover {
     color: lighten($secondary-color, $amount: 10%)
 }
-
+.route-heading{
+    font-weight: 900;
+    color:$secondary-color;
+    
+}
 .box {
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.120);
     padding: 2rem;

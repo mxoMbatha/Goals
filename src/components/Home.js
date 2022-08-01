@@ -55,8 +55,7 @@ const Home = () =>
   const setNewGoal = async(goal) =>
   {
      
-   
-    const res = await fetch('http://localhost:5000/goals', {
+       const res = await fetch('http://localhost:5000/goals', {
       method: 'POST',
       headers: {
         'Content-Type':'application/json'
@@ -112,6 +111,7 @@ const Home = () =>
     );
    
   }
+  
   //Delete goal
       const deleteGoal =async (id) =>
   {
