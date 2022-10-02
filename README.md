@@ -3,7 +3,7 @@
 ## Table of contents
 
 - [General Info](#general-info)
-- [Features](## features)
+- [Features](##features)
 - [Screenshots](##Screenshots)
 - [Technologies](#technologies)
 - [Mobile Support](#mobile-support)
@@ -30,7 +30,10 @@ This project is created with :
 
 - React 18.2.0
 - Sass 8.12.2
-- Json-server 0.17.0
+- bcryptjs 2.4.3
+- dotenv 16.0.2
+- express 4.18.1,
+- mongoDB 
 - Node.js 18.4.0
 - Inspiratinal-qoutes.js 2.0.1
 
