@@ -1,0 +1,80 @@
+{
+  "goals": [
+    {
+      "id": 1,
+      "text": "Finish my first react project",
+      "reminder": false,
+      "date": "2022-07-25",
+      "term": "short-term",
+      "time": "07:00",
+      "achieved": "achieved"
+    },
+    {
+      "id": 2,
+      "text": "Build a django voting app",
+      "reminder": false,
+      "date": "2022-09-01",
+      "term": "short-term",
+      "time": "20:00"
+    },
+    {
+      "id": 3,
+      "text": "Build my portfolio website with django and react",
+      "reminder": false,
+      "date": "2023-09-12",
+      "term": "long-term",
+      "time": "10:00"
+    },
+    {
+      "text": "Solve Time skipping issue",
+      "date": "2022-07-30",
+      "reminder": true,
+      "term": "short-term",
+      "time": "23:57",
+      "id": 5
+    },
+    {
+      "text": "Render filtered long-term goals ",
+      "date": "2022-07-27",
+      "reminder": false,
+      "term": "short-term",
+      "time": "10:13",
+      "id": 6,
+      "achieved": "achieved"
+    },
+    {
+      "text": "Add error messages",
+      "date": "2022-07-28",
+      "reminder": false,
+      "term": "short-term",
+      "time": "10:35",
+      "id": 7,
+      "achieved": "achieved"
+    },
+    {
+      "text": "Render new goals first",
+      "date": "2022-07-27",
+      "reminder": false,
+      "term": "short-term",
+      "time": "18:00",
+      "id": 8,
+      "achieved": "achieved"
+    },
+    {
+      "text": "Retire my mother",
+      "date": "2030-05-29",
+      "reminder": false,
+      "term": "long-term",
+      "time": "08:40",
+      "id": 10
+    },
+    {
+      "text": "Build resume web application: MERN STACK",
+      "date": "2022-10-01",
+      "reminder": true,
+      "term": "short-term",
+      "time": "06:02",
+      "id": 11
+    }
+  ]
+}
