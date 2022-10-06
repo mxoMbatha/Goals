@@ -2,7 +2,7 @@ const mongoose = require('mongoose'),
 goalSchema = mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        required: false,
+        required: true,
         ref:'User'
     },
     text: {
@@ -11,7 +11,6 @@ goalSchema = mongoose.Schema({
     },
     reminder: {
         type: Boolean,
-        
     },
     date: {
         type: String,

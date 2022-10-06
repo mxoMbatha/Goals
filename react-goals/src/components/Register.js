@@ -57,7 +57,7 @@ const Register = () => {
                     <input type="password" name="password2" id="password2" value={password2} placeholder="Confirm password" onChange={onChange}/>
                 </div>
                  <input type="submit" value="Register" className='btn auth-btn auth-input' />
-                <Link to="/Register" className='aut-link'>Already have an account? </Link>
+                <Link to="/login" className='aut-link'>Already have an account? </Link>
             </form>
     </div>
   )
