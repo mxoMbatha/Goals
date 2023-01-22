@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import { FaSignInAlt, FaUserAlt, FaUserAltSlash } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-
+import React from 'react'
 const Login = () => {
     
     const [formData, setFormData] = useState({

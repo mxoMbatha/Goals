@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaUser } from 'react-icons/fa';
 import { Link } from "react-router-dom";
+import React from 'react';
 const Register = () => {
     const [formData, setFormData] = useState({
         firstName: '',

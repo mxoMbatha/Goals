@@ -1,4 +1,5 @@
-import {  FaTrashAlt } from 'react-icons/fa'
+import { FaTrashAlt } from 'react-icons/fa';
+import React from 'react'
 const Goal = ({ goal,onAchieve,onReminder,onDelete }) =>
 {
  
