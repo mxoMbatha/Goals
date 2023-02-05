@@ -6,13 +6,14 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "npm start --prefix react-goals",
+    "client": "npm start --prefix goals-frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "cors": "^2.8.5",
+    "create-react-app": "^1.2.1",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "express-async-handler": "^1.2.0",
