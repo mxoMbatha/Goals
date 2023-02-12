@@ -20,3 +20,10 @@ code {
 .container{
   text-align: center;
 }
+.hamburger{
+  cursor:pointer;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  transition: 1s;
+}
