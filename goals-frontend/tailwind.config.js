@@ -4,10 +4,13 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    container: {
+      center: true,
+    },
     screens:{
       sm:'480px',
       md:'768px',
-      lg:'976PX',
+      lg:'1024px',
       xl:'1440px',
       xxl:'1600px',
     },
@@ -24,5 +27,7 @@ module.exports = {
         }
       },
     },
-    plugins: [],
+    plugins: [
+      require('@tailwindcss/forms'),SS
+    ],
 }

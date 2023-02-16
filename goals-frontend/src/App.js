@@ -8,7 +8,7 @@ function App() {
   return (
     <>
     <Router>
-    <div className="container px-4">
+    <div>
       <Navigation/>
       <Routes>
         <Route path='/' element={<Home/>}/>
