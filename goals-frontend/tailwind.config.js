@@ -28,6 +28,6 @@ module.exports = {
       },
     },
     plugins: [
-      require('@tailwindcss/forms'),SS
+      require('@tailwindcss/forms'),
     ],
 }

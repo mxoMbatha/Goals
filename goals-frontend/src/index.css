@@ -28,3 +28,7 @@ code {
   position: relative;
   transition: 1s;
 }
+.logo{
+  font-size:1.5rem;
+  font-weight: 800; 
+}
