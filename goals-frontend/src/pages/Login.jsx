@@ -20,7 +20,7 @@ const Login = () => {
   return (
     <div className='container p-2 mx-auto'>
        <div className="flex min-h-full mx-auto  items-center justify-center py-12 px-6 sm:px-6 lg:px-8   rounded mt-7 ">
-        <div className="w-full max-w-md bg-gray-100  p-12 rounded space-y-8">
+        <div className="w-full max-w-md bg-gray-100 border p-12 rounded space-y-8">
           <div>
             <div className="mx-auto  h-10  w-auto logo text-fanta">
               <p className='text-3xl'>Goals</p>
@@ -31,7 +31,7 @@ const Login = () => {
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600">
               Or{'  '}
-              <Link to="./Register" className="font-medium text-fanta hover:text-darkBlueish-100">
+              <Link to="/Register" className="font-medium text-fanta hover:text-darkBlueish-100">
                   Create account here
               </Link>
             </p>
