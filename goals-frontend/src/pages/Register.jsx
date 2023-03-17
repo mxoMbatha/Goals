@@ -184,8 +184,8 @@ const Register = () => {
               </div>
 
               <div className="text-sm">
-                <a href="#" className="font-medium text-fanta hover:text-fanta">
-                   </a>
+                <Link to="#" className="font-medium text-fanta hover:text-fanta">
+                   </Link>
               </div>
             </div>
 

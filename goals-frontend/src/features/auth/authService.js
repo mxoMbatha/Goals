@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-const API_link='/users ';
+const API_link='/users';
 const register= async(userData)=>{
     const response=await axios.post(API_link,userData)
     if(response.data){
@@ -22,6 +22,6 @@ const logout = () => {
 const authService={
     register,
     logout,
-    login
+    login,
 }
 export default authService

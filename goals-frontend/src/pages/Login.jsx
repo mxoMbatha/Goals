@@ -35,7 +35,7 @@ const Login = () => {
     e.preventDefault();
     const userData = {
       email,
-      password
+      password,
     }
     dispatch(login(userData))
     
@@ -111,9 +111,9 @@ const Login = () => {
               </div>
 
               <div className="text-sm">
-                <a href="#" className="font-medium text-fanta hover:text-fanta">
+                <Link to="#" className="font-medium text-fanta hover:text-fanta">
                   Forgot your password?
-                </a>
+                </Link>
               </div>
             </div>
 

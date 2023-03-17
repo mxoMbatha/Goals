@@ -2,7 +2,7 @@ import React from 'react'
 
 const Spinner = () => {
   return (
-      <div className='spinnerConatainer'>
+      <div className='spinnerContainer'>
           <div className="spinner"></div>
     </div>
   )

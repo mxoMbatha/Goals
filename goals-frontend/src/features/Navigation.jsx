@@ -26,7 +26,7 @@ const Navigation = () => {
       <div className="flex items-center justify-between">
       <div className=""><h1><Link to='./' className=' hover:text-darkGrayishBlue text-fanta logo font-bold'> Goals</Link></h1></div>
         <div className="hidden md:flex space-x-12 font-bold ">
-          <Link to='./Comminity' className='hover:text-darkGrayishBlue text-fanta'>Community</Link>
+          <Link to='./Comminity' className='hover:text-darkGrayishBlue text-fanta'>dashboard</Link>
           <Link to='./About' className='hover:text-darkGrayishBlue text-fanta'>About</Link>
         </div>
         
@@ -39,7 +39,7 @@ const Navigation = () => {
         </div>
         <div className="md:hidden">
           <div id="menu" className={`absolute rounded transition-all ease-out delay-500 flex-col bg-fanta border times-center self-end py-8 mt-10 sm:mt-5 space-y-6 font-bold bg-da-100 :w-auto sm:self-center left-6 right-6 dropshadow-md ${hamburgerList?'flex': 'hidden'}`}>
-          <Link to='./Comminity' className='hover:text-darkGrayishBlue text-white'>Community</Link>
+          <Link to='./Comminity' className='hover:text-darkGrayishBlue text-white'>dashboard</Link>
           <Link to='./About' className='hover:text-darkGrayishBlue text-white'>About</Link>
           <Link className="font-bold text-white" to='./Login'>Sign In</Link>  
           </div>
