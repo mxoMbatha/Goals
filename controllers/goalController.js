@@ -48,14 +48,13 @@ const updateGoal = asyncHandler(async (req, res) =>
     
     }
     //find user
-    const user = await User.findById(req.user.id)
-    if (!user) {
+    if (!req.user) {
         res.status(401)
         throw new error('user not found')
     }
 
     //logged in user must be goal user
-    if (goal.user.toString() !==user.id) {
+    if (goal.user.toString() !==req.user.id) {
         res.status(401)
         throw new Error('user not allowed')
     }
@@ -74,14 +73,13 @@ const deleteGoal = asyncHandler(async (req, res) =>
         throw new Error('Goal not found')
     }
     //find user
-    const user = await User.findById(req.user.id)
-    if (!user) {
+      if (!req.user) {
         res.status(401)
         throw new error('user not found')
     }
 
     //logged in user must be goal user
-    if (goal.user.toString() !==user.id) {
+    if (goal.user.toString() !==req.user.id) {
         res.status(401)
         throw new Error('user not allowed')
     }
