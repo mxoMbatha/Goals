@@ -1,22 +1,48 @@
 import React from 'react'
-import { useState } from 'react';
-import { Link } from 'react-router-dom'
+import { useState,useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
+import { login, reset } from '../features/auth/authSlice';
+import Spinner from '../features/Spinner';
 const Login = () => {
  const [formData,setFormData]=useState({
   email:'',
   password:'',
  })
- const {email,password}=formData;
+  const { email, password } = formData;
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { user, isLoading, isError, isSuccess, messsage } = useSelector((state) => state.auth);
+
+  useEffect(() => {
+    if (isError) {
+      toast.error(messsage)
+    }
+    if (isSuccess || user) {
+      navigate('/')
+    }
+    dispatch(reset)
+  }, [user, isError, isSuccess, messsage, navigate, dispatch])
+
  const onChange=(e)=>{
   setFormData((prevState)=>({
     ...prevState,[e.target.name]:e.target.value,
   }))
   console.log('changed')
  }
- const onSubmit=(e)=>{
-  e.preventDefault();
-  console.log('submitted')
- }
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const userData = {
+      email,
+      password
+    }
+    dispatch(login(userData))
+    
+  }
+  if (isLoading) {
+      return <Spinner/> 
+    }
   return (
     <div className='container p-2 mx-auto'>
        <div className="flex min-h-full mx-auto  items-center justify-center py-12 px-6 sm:px-6 lg:px-8   rounded mt-7 ">

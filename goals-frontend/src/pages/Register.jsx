@@ -179,7 +179,7 @@ const Register = () => {
                   className="h-4 w-4 rounded border-gray-300 text-fanta focus:ring-fanta"
                 />
                 <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-500">
-                  Read and consent to our <a href="#" className="font-medium text-fanta hover:text-fanta">Terms and Conditions</a>
+                  Read and consent to our <Link to="#" className="font-medium text-fanta hover:text-fanta">Terms and Conditions</Link>
                 </label>
               </div>
 
