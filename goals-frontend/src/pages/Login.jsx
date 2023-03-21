@@ -20,7 +20,7 @@ const Login = () => {
       toast.error(messsage)
     }
     if (isSuccess || user) {
-      navigate('/')
+      navigate('/dashboard')
     }
     dispatch(reset)
   }, [user, isError, isSuccess, messsage, navigate, dispatch])
@@ -57,7 +57,7 @@ const Login = () => {
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600">
               Or{'  '}
-              <Link to="/Register" className="font-medium text-fanta hover:text-darkBlueish-100">
+              <Link to="/register" className="font-medium text-fanta hover:text-darkBlueish-100">
                   Create account here
               </Link>
             </p>
@@ -111,7 +111,7 @@ const Login = () => {
               </div>
 
               <div className="text-sm">
-                <Link to="#" className="font-medium text-fanta hover:text-fanta">
+                <Link to="/resetpassword" className="font-medium text-fanta hover:text-fanta">
                   Forgot your password?
                 </Link>
               </div>

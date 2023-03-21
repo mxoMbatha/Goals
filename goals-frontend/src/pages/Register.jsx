@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { register, reset } from '../features/auth/authSlice';
 import Spinner from '../features/Spinner';
+import Qoutes from '../features/Qoutes';
 const Register = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -56,11 +57,14 @@ const Register = () => {
   }
   
   return (
-    <div className="griding mt-10">
-    <div className="tex-center bg-fanta">Sign Up</div>
+    <div className="griding">
+      <div className="tex-center qoutes bg-fanta">
+  
+        <div className="text-6xl font-bold mx-5"><Qoutes/></div>
+      </div>
     <div className='container p-2 mx-auto'>
      
-       <div className="flex min-h-full mx-auto  items-center justify-center py-12 px-6 sm:px-6 lg:px-8   rounded mt-7 ">
+       <div className="flex min-h-full mx-auto  items-center justify-center px-6 sm:px-6 lg:px-8   rounded  ">
         <div className="w-full max-w-md bg-gray-100 border p-12 rounded space-y-8">
           <div>
             <div className="mx-auto  h-10  w-auto logo text-fanta">
@@ -175,7 +179,8 @@ const Register = () => {
                 <input
                   id="remember-me"
                   name="remember-me"
-                  type="checkbox"
+                    type="checkbox"
+                    onChange={onChange}
                   className="h-4 w-4 rounded border-gray-300 text-fanta focus:ring-fanta"
                 />
                 <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-500">

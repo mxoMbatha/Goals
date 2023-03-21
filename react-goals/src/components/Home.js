@@ -134,7 +134,11 @@ const Home = () =>
         <Nav />
       </nav>
         <div className="container" onClick={ () => { dropDown === true && setDropDown(false) } }>
-       
+        // useEffect(() => {
+     
+  //   (setQoute(qoute[0]))
+        
+  // }, [qoute]);
           <Routes>
             <Route path='/Goals.'  element={ 
             <>  

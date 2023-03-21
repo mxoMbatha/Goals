@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-
+import Qoutes from '../features/Qoutes';
+import Navigation from '../features/Navigation';
 const Dashbord = () =>
 {
     const navigate = useNavigate();
@@ -11,11 +12,17 @@ const Dashbord = () =>
     useEffect(() =>
     {
         if (!user) {
-            navigate('/login');
+          navigate('/login');
        } 
     },[user,navigate])
   return (
-    <div>Dashbord</div>
+     <>
+    <Navigation/>
+     <div className='container p-2 mx-auto'>
+      <h1>Welcome  { user.firstName}</h1>
+      <Qoutes/>
+      </div>
+      </>
   )
 }
 
