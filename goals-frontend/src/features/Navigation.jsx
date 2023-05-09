@@ -23,8 +23,8 @@ const Navigation = () => {
   setHamburgerList(!hamburgerList);
   }
   return (
-    <div className={`${useLocation().pathname==='/register' && 'hidden' } relative container mx-auto p-3 mt-6 transition delay-500 `}>
-      <div className="flex items-center justify-between container lg:px-12">
+    <div className={`${useLocation().pathname==='/register'&& 'hidden' } relative container mx-auto  px-4 py-3 sm:mt-6 transition delay-500 `}>
+      <div className="flex items-center justify-between container ">
       <div className=""><h1><Link to='/' className=' hover:text-darkGrayishBlue text-fanta logo font-bold'> Goals</Link></h1></div>
         <div className="hidden md:flex space-x-12 font-bold ">
           <Link to='/dashboard' className='hover:text-darkGrayishBlue text-fanta'>Dashboard</Link>
@@ -39,10 +39,10 @@ const Navigation = () => {
          onClick={ openHamburger }>{hamburgerList? <FaTimes  className='text-red-600 hover:text-darkGrayishBlue'/> : <FaBars className='text-fanta'/>}</button>
         </div>
         <div className="md:hidden">
-          <div id="menu" className={`absolute rounded transition-all ease-out delay-500 flex-col bg-fanta border times-center self-end py-8 mt-10 sm:mt-5 space-y-6 font-bold bg-da-100 :w-auto sm:self-center left-6 right-6 dropshadow-md ${hamburgerList?'flex': 'hidden'}`}>
-          <Link to='/dashboard' className='hover:text-darkGrayishBlue text-white'>Dashboard</Link>
-          <Link to='/about' className='hover:text-darkGrayishBlue text-white'>About</Link>
-          <Link className="font-bold text-white" to='/login'>Sign In</Link>  
+          <div id="menu" className={`absolute rounded transition-all ease-out delay-500 flex-col bg-fanta border times-center self-end py-8 mt-10 sm:mt-5 space-y-6 font-bold bg-da-100 :w-auto sm:self-center p-3 left-6 right-6 dropshadow-md ${hamburgerList?'flex': 'hidden'}`}>
+          <Link to='/dashboard' className='hover:text-darkGrayishBlue text-white text-left  '>Dashboard</Link>
+          <Link to='/about' className='hover:text-darkGrayishBlue text-white text-left'>About</Link>
+          <Link className="font-bold  text-left text-white" to='/login'>Sign In</Link>  
           </div>
         </div>
     </div>

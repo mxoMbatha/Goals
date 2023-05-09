@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Qoutes from '../features/Qoutes';
-import Navigation from '../features/Navigation';
 const Dashbord = () =>
 {
     const navigate = useNavigate();
@@ -17,7 +16,6 @@ const Dashbord = () =>
     },[user,navigate])
   return (
      <>
-    <Navigation/>
      <div className='container p-2 mx-auto'>
       <h1>Welcome  { user.firstName}</h1>
       <Qoutes/>

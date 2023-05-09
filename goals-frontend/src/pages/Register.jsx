@@ -57,22 +57,22 @@ const Register = () => {
   }
   
   return (
-    <div className="griding">
-      <div className="tex-center qoutes bg-fanta">
+    <div className="grid md:grid-cols-2 grid-rows">
+      <div className="tex-center qoutes md:bg-fanta py-8  ">
   
-        <div className="text-6xl font-bold mx-5"><Qoutes/></div>
+        <div className="md:text-6xl text-2xl font-bold mx-5"><Qoutes/></div>
       </div>
-    <div className='container p-2 mx-auto'>
+    <div className='container  mx-auto'>
      
        <div className="flex min-h-full mx-auto  items-center justify-center px-6 sm:px-6 lg:px-8   rounded  ">
-        <div className="w-full max-w-md bg-gray-100 border p-12 rounded space-y-8">
+        <div className="w-full max-w-md bg-gray-100 border p-10 px-12 px-8 rounded my-10  space-y-8">
           <div>
-            <div className="mx-auto  h-10  w-auto logo text-fanta">
+            <div className="mx-auto  h-5  w-auto logo text-fanta">
               <p className='text-3xl'>Goals</p>
             </div>
 
             <h2 className="mt-6 text-center text-xl font-bold tracking-tight text-gray-900">
-              Create your account here
+              Create your free account here
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600">
               Or{'  '}
