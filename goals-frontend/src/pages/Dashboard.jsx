@@ -17,11 +17,11 @@ const Dashbord = () =>
   return (
      <>
      <div className='container p-2 mx-auto'>
-      <h1>Welcome  { user.firstName}</h1>
+      <h1>Welcome  {user.firstName}</h1>
       <Qoutes/>
       </div>
       </>
   )
 }
 
-export default Dashbord
+export default Dashbord   

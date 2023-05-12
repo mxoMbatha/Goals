@@ -36,6 +36,7 @@ code {
   display:grid;
   grid-template-columns:1fr 2fr;
   height: 100vh;
+  color:rgb(235, 230, 230)
 }
 .spinnerContainer{
   position:fixed;

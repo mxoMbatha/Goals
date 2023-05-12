@@ -23,16 +23,19 @@ const Navigation = () => {
   setHamburgerList(!hamburgerList);
   }
   return (
-    <div className={`${useLocation().pathname==='/register'&& 'hidden' } relative container mx-auto  px-4 py-3 sm:mt-6 transition delay-500 `}>
+    <div className={`${useLocation().pathname==='/register'&& 'hidden' } relative container mx-auto  px-4 py-3 sm:mt-2 transition delay-500 `}>
       <div className="flex items-center justify-between container ">
       <div className=""><h1><Link to='/' className=' hover:text-darkGrayishBlue text-fanta logo font-bold'> Goals</Link></h1></div>
-        <div className="hidden md:flex space-x-12 font-bold ">
-          <Link to='/dashboard' className='hover:text-darkGrayishBlue text-fanta'>Dashboard</Link>
-          <Link to='/about' className='hover:text-darkGrayishBlue text-fanta'>About</Link>
-        </div>
         
-        <div className='flex'>
-          {user ? <><button onClick={onLogout} className="hidden md:block p-1 text-fanta bg-white text-xl baseline px-4 hover:text-darkGrayishBlue font-bold"><FaSignOutAlt/></button></>: <><Link className="hidden md:block p-1 text-fanta bg-white text-xl baseline px-4 hover:text-darkGrayishBlue font-bold" to='/login'><FaUser/></Link></>}
+        
+        <div className='flex p-6 pr-3 shadow  rounded gap-3 grid grid-cols-2 '>
+          
+          <Link to='/dashboard' className='hidden md:flex space-x-12 font-bold hover:text-darkGrayishBlue  text-fanta'>Dashboard</Link>
+          {/* <Link to='/about' className='hover:text-darkGrayishBlue text-fanta'>About</Link> */}
+
+          { <Link className={ "hidden md:block p-1 text-fanta grid pl-9 bg-none text-xl baseline   hover:text-darkGrayishBlue  font-bold" } to='/login'><FaUser /></Link> }
+          
+          {user ? <><button onClick={onLogout} className="hidden md:block p-1 text-fanta  bg-white text-xl baseline  hover:text-darkGrayishBlue font-bold"><FaSignOutAlt/></button></>: <></>}
         </div>
          
         <button id='menu-btn' className={`block hamburger md:hidden focus:outline-none ' transition delay-500 easy-out`}

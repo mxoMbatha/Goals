@@ -46,7 +46,7 @@ const Login = () => {
   return (
     <div className='container p-2 mx-auto'>
        <div className="flex min-h-full mx-auto  items-center justify-center py-12 px-6 sm:px-6 lg:px-8   rounded mt-7 ">
-        <div className="w-full max-w-md bg-gray-100 border p-12 rounded space-y-8">
+        <div className="w-full max-w-md bg-stone-50 border shadow p-12 rounded space-y-8">
           <div>
             <div className="mx-auto  h-10  w-auto logo text-fanta">
               <p className='text-3xl'>Goals</p>
