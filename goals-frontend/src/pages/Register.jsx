@@ -57,14 +57,14 @@ const Register = () => {
   }
   
   return (
-    <div className="grid md:grid-cols-2 grid-rows">
-      <div className="tex-center qoutes md:bg-fanta py-8  ">
+    <div className="grid md:grid-cols-2 grid-rows shadow px-8">
+      <div className="tex-center mt-12 qoutes md:bg-fanta py-8  ">
   
-        <div className="md:text-6xl text-2xl font-bold mx-5"><Qoutes/></div>
+        <div className="xl:text-6xl lg:text-4xl text-2xl font-bold mx-5"><Qoutes/></div>
       </div>
     <div className='container  mx-auto'>
      
-       <div className="flex min-h-full mx-auto  items-center justify-center px-6 sm:px-6 lg:px-8   rounded  ">
+       <div className="flex min-h-full mx-auto  items-center justify-center p-2 pr-0 sm:px-6 lg:px-8   rounded  ">
         <div className="w-full max-w-md bg-gray-100 border p-10 px-12 px-8 rounded my-10  space-y-8">
           <div>
             <div className="mx-auto  h-5  w-auto logo text-fanta">

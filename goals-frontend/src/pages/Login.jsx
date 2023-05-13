@@ -13,17 +13,17 @@ const Login = () => {
   const { email, password } = formData;
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { user, isLoading, isError, isSuccess, messsage } = useSelector((state) => state.auth);
+  const { user, isLoading, isError, isSuccess, message } = useSelector((state) => state.auth);
 
   useEffect(() => {
     if (isError) {
-      toast.error(messsage)
+      toast.error(message)
     }
     if (isSuccess || user) {
       navigate('/dashboard')
     }
     dispatch(reset)
-  }, [user, isError, isSuccess, messsage, navigate, dispatch])
+  }, [user, isError, isSuccess, message, navigate, dispatch])
 
  const onChange=(e)=>{
   setFormData((prevState)=>({

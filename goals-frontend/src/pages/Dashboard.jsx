@@ -7,18 +7,18 @@ const Dashboard = () =>
     const navigate = useNavigate();
     const { user } = useSelector((state) => state.auth);
 
-    useEffect(() =>
-    {
-        if (!user) {
-          navigate('/login');
-      }
+  useEffect(() => {
+    if (!user) {
+    navigate('/login');
+    }
        
-    },[user,navigate])
+  }, [navigate,user]);
   return (
      <>
-     <div className='container p-2 mx-auto'>
-      <h1>Welcome  {user.firstName}</h1>
-      <Qoutes/>
+      <div className='container p-2 mx-auto'>
+        
+      <h1 className='md:text-4xl text-2xl text-center p-4 font-bold'>Welcome to your Dashboard {user && user.firstName}</h1>
+      <div className="px-6 py-2 text-sm"><Qoutes/></div>
       </div>
       </>
   )

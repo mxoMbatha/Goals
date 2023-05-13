@@ -53,18 +53,18 @@ const registerUser = asyncHandler(async (req, res) =>
 //access : Public
 const loginUser = asyncHandler(async (req, res) =>
 {
+
+
     const { email, password } = req.body
-    
+    if (!email||!password) {
+        res.status(400)
+        throw new Error('Please fill in all fields')
+    }
     //check email
     const user = await User.findOne({ email })
     //check password
     if (user && (await bcrypt.compare(password, user.password))) {
-        res.json({
-            _id: user.id,
-            name: user.userName,
-            email: user.email,
-            token:generateToken(user._id)
-        })
+        res.json(user)
     } else {
         res.status(400)
         throw new Error('Invalid credintials');        

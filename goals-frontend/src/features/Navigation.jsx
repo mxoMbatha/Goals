@@ -4,7 +4,6 @@ import { FaUser,FaBars,FaTimes, FaSignOutAlt} from 'react-icons/fa';
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout, reset } from './auth/authSlice';
-import { useLocation } from 'react-router-dom';
 
 const Navigation = () => {
 
@@ -23,9 +22,9 @@ const Navigation = () => {
   setHamburgerList(!hamburgerList);
   }
   return (
-    <div className={`${useLocation().pathname==='/register'&& 'hidden' } relative container mx-auto  px-4 py-3 sm:mt-2 transition delay-500 `}>
+    <div className={`relative container mx-auto  px-4 py-3 pb-6 sm:mt-2 transition delay-500 xxl:px-12`}>
       <div className="flex items-center justify-between container ">
-      <div className=""><h1><Link to='/' className=' hover:text-darkGrayishBlue text-fanta text-6xl logo font-bold'> Goals</Link></h1><h5 className='text-center text-black text-sm antialiased tracking-wider font-thin font-bold p-1'>prioritize your life</h5></div>
+      <div className=""><h1 className='text-6xl'><Link to='/' className=' hover:text-darkGrayishBlue text-fanta  logo font-bold'> Goals</Link></h1><h5 className='text-center text-black text-sm antialiased tracking-wider font-thin font-bold p-1'>prioritize your life</h5></div>
         
         
         <div className='flex p-6 pr-3 md:shadow  rounded gap-3 grid grid-cols-2 '>

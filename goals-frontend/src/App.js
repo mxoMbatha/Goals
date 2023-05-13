@@ -13,7 +13,8 @@ function App() {
     <>
        
     <Router>
-        <div>
+        <div className='container'>
+          <ToastContainer />
           <Navigation/>
       <Routes>
         <Route path='/' element={<Home/>}/>
@@ -25,7 +26,7 @@ function App() {
       </Routes>
     </div>
       </Router>
-      <ToastContainer />
+     
     </>
   );
 }
