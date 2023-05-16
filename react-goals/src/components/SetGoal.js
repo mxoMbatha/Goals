@@ -36,7 +36,7 @@ const SetGoal = ({ onSet , onDisplaySet}) =>
         const dateValue = e.target.valueAsDate;
         const dates = new Date()
         const thisDay = dates.getDate(), thisMonth = dates.getMonth(), thisYear = dates.getFullYear();
-
+ 
         if (dateValue.getFullYear() < thisYear) {
 
             alert('You can\'t set your goal back in time. Please contact us if you possess a time machine')
@@ -95,7 +95,7 @@ const SetGoal = ({ onSet , onDisplaySet}) =>
                   }
                   } />
               </div>
-              <input type="submit" value="Save Goal" className='btn saveGoal' />
+              <input type="submit" value="Save Goal" className='shadow bg-fanta' />
           </form>
       </>
   )

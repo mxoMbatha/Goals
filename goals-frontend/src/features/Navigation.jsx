@@ -22,7 +22,7 @@ const Navigation = () => {
   setHamburgerList(!hamburgerList);
   }
   return (
-    <div className={`relative container mx-auto  px-4 py-3 pb-6 sm:mt-2 transition delay-500 xxl:px-12`}>
+    <div className={`relative container mx-auto  px-4 py-3 sm:pb-6  sm:mt-2 transition delay-500 xxl:px-12`}>
       <div className="flex items-center justify-between container ">
       <div className=""><h1 className='text-6xl'><Link to='/' className=' hover:text-darkGrayishBlue text-fanta  logo font-bold'> Goals</Link></h1><h5 className='text-center text-black text-sm antialiased tracking-wider font-thin font-bold p-1'>prioritize your life</h5></div>
         
