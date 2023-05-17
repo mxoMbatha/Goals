@@ -2,7 +2,7 @@ import React, { useEffect ,useState} from 'react'
 import { useSelector} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Qoutes from '../features/Qoutes';
-import { FaBars } from 'react-icons/fa';
+import { FaBars,FaTimes } from 'react-icons/fa';
 import SetGoalForm from '../features/SetGoalForm';
 const Dashboard = () =>
 {
@@ -28,10 +28,12 @@ const Dashboard = () =>
           <div className="shadow py-2 px-3 mx-6 md:mt-1 mt-2">
           <div className="flex justify-between pt-6 px-8">
             <div className='pt-2'><FaBars /></div>
-            <button type="submit" className='px-2 font-bold shadow text-fanta right py-1 hover:bg-gray-300 hover:text-white hover:px-3 transition delay-100 ease-in-out'>set goal</button>
+              <button type="submit" className={`${displaySet ? 'text-red-600 bg-red-25':'text-fanta'} px-2 font-bold shadow  right py-1 hover:bg-gray-300 hover:text-white transition delay-100 ease-in-out` } onClick={onDisplaySet
+              }>
+              { displaySet ? <FaTimes/> : 'set goal' }</button>
             </div>
             <div className="sm:container rounder p-2">
-          <SetGoalForm/>
+         { displaySet && <SetGoalForm onDisplaySet={onDisplaySet}/>}
         </div>
           </div>
         </div>

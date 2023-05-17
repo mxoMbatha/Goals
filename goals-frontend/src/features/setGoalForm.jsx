@@ -1,11 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
-const SetGoalForm = () =>
+const SetGoalForm = ({onDIsplaySet}) =>
 {
   const [text, setGoaltext] = useState('');
   const [reminder, setReminder] = useState(false);
-    const [date, setDate] = useState('');
-    const [term, setTerm] = useState('');
+  const [date, setDate] = useState('');
+  const [term, setTerm] = useState('');
   const [time, setTime] = useState('');
       const onTimeSkip = (e) =>
     {
@@ -64,7 +64,7 @@ const SetGoalForm = () =>
           <label htmlFor="reminder" className='text-gray-500' >Set reminder</label>
           <input type="checkbox"  name='reminder' id='reminder' checked={ reminder }  value={ reminder } onChange={(e)=>{setReminder(e.currentTarget.checked)}} placeholder='Set a reminder' className='hover:text-fanta rounded ml-2 block text-sm text-gray-900 ' />
         </div>
-        <input type="submit" value="Save Goal" className='block w-3/4 mx-auto flex shadow bg-fanta px-8  py-1 rounded font-bold text-white' />
+        <input type="submit" value="Save Goal" className='block w-full shadow bg-fanta px-8  py-1 rounded font-bold text-white' />
           </form>
     </div>
   )

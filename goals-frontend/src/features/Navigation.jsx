@@ -27,7 +27,7 @@ const Navigation = () => {
       <div className=""><h1 className='text-6xl'><Link to='/' className=' hover:text-darkGrayishBlue text-fanta  logo font-bold'> Goals</Link></h1><h5 className='text-center text-black text-sm antialiased tracking-wider font-thin font-bold p-1'>prioritize your life</h5></div>
         
         
-        <div className='flex p-6 pr-3 md:shadow  rounded gap-3 grid grid-cols-2 '>
+        <div className='flex p-2 pl-4 pr-3 md:shadow  rounded gap-3 grid grid-cols-2 '>
           
           <Link to='/dashboard' className='hidden md:flex space-x-12 font-bold hover:text-darkGrayishBlue  text-fanta'>Dashboard</Link>
           {/* <Link to='/about' className='hover:text-darkGrayishBlue text-fanta'>About</Link> */}
@@ -42,7 +42,7 @@ const Navigation = () => {
         </div>
         <div className="md:hidden">
           <div id="menu" className={`absolute rounded transition-all ease-out delay-500 flex-col bg-fanta border times-center self-end py-8 px-6 mt-10 sm:mt-5 space-y-6 font-bold bg-da-100 :w-auto sm:self-center p-3 left-6 right-6 dropshadow-md ${hamburgerList?'flex': 'hidden'}`}>
-          <Link to='/dashboard' className='hover:text-darkGrayishBlue text-white text-left  '>Dashboard</Link>
+          <Link to='/dashboard' className='hover:text-darkGrayishBlue text-white text-left'>Dashboard</Link>
           <Link to='/about' className='hover:text-darkGrayishBlue text-white text-left'>About</Link>
           {user ? <><button onClick={onLogout} className=" md:block p-1 text-white  bg-fanta text-xl baseline  hover:text-darkGrayishBlue font-bold"><FaSignOutAlt/></button></>: <><Link className="font-bold  text-left text-white" to='/login'><FaUser /></Link></>}
           </div>
