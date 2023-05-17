@@ -17,6 +17,7 @@ const Navigation = () => {
     dispatch(reset())
     navigate('/')
   }
+  
   const [hamburgerList,setHamburgerList]=useState(false);
   const openHamburger =() =>{
   setHamburgerList(!hamburgerList);
@@ -27,7 +28,7 @@ const Navigation = () => {
       <div className=""><h1 className='text-6xl'><Link to='/' className=' hover:text-darkGrayishBlue text-fanta  logo font-bold'> Goals</Link></h1><h5 className='text-center text-black text-sm antialiased tracking-wider font-thin font-bold p-1'>prioritize your life</h5></div>
         
         
-        <div className='flex p-2 pl-4 pr-3 md:shadow  rounded gap-3 grid grid-cols-2 '>
+        <div className='flex p-2  pl-4 pr-3 md:shadow  rounded gap-3 grid grid-cols-2 '>
           
           <Link to='/dashboard' className='hidden md:flex space-x-12 font-bold hover:text-darkGrayishBlue  text-fanta'>Dashboard</Link>
           {/* <Link to='/about' className='hover:text-darkGrayishBlue text-fanta'>About</Link> */}
