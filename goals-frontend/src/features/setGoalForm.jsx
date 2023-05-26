@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
-const SetGoalForm = ({onDIsplaySet}) =>
+import { useDispatch } from 'react-redux'
+import { setGoal } from './goal/goalSlice'
+const SetGoalForm = ({onDisplaySet}) =>
 {
   const [text, setGoaltext] = useState('');
   const [reminder, setReminder] = useState(false);
@@ -38,11 +40,23 @@ const SetGoalForm = ({onDIsplaySet}) =>
         }
         setDate(e.target.value)
         setTerm(myterm)
-    }; 
+  };
+  const dispatch=useDispatch()
+  const onSubmit = (e) =>
+  {
+    e.preventDefault()
+    dispatch(setGoal({ text, date, time, term, reminder }))
+    setGoaltext('')
+    setTime('')
+    setTerm('')
+    setDate('')
+    setReminder(false)
+    
+  }
 
   return (
       <div className='form justify-center mx-auto p-6'>
-          <form action="" className='p-1 px-4  py-6 rounded shadow mt-2 space-y-6' >
+          <form action="" className='p-1 px-4  py-6 rounded shadow mt-2 space-y-6' onSubmit={onSubmit} >
         <div className="md:mx-auto px-6 sm:px-2">
           <label htmlFor="goal-text" className='sr-only'>Goal</label>
           <input type="text" name='goal-text' id='goal-text' value={text} onChange={(e)=>{setGoaltext(e.target.value)}} placeholder='Add your goal' className=' relative block w-full appearance-none rounded p-2 py-1 border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-fanta focus:outline-none focus:ring-fanta sm:text-sm text-sm ' />

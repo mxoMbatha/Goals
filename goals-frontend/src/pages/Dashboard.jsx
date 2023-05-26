@@ -1,21 +1,31 @@
 import React, { useEffect ,useState} from 'react'
-import { useSelector} from 'react-redux';
+import { useDispatch, useSelector} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Qoutes from '../features/Qoutes';
 import { FaBars,FaTimes } from 'react-icons/fa';
 import SetGoalForm from '../features/SetGoalForm';
+import { getGoals,reset } from '../features/goal/goalSlice';
 const Dashboard = () =>
 {
-    const navigate = useNavigate();
+  const dispatch=useDispatch
+  const navigate = useNavigate();
   const { user } = useSelector((state) => state.auth);
+  const {goals,isLoading,isError,message}=useSelector((state)=>state.goals)
   const [displaySet,setDisplaySet]=useState(false)
 
-  useEffect(() => {
+  useEffect(() =>
+  {
+    if (isError) (
+      console.log(message)
+    )
     if (!user) {
     navigate('/login');
     }
-       
-  }, [navigate, user]);  
+    return () =>
+    {
+       dispatch(reset())
+     }  
+  }, [navigate, user,isError,message,dispatch]);  
 
   const onDisplaySet = () => { setDisplaySet(!displaySet); }
   return (
