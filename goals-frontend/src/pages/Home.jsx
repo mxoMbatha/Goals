@@ -1,5 +1,5 @@
 import React from 'react';
-import Qoutes from '../features/Qoutes';
+import Qoutes from '../components/Qoutes';
 const Home = () => {
   return (
     <>

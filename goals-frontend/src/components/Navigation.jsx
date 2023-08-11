@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FaUser,FaBars,FaTimes, FaSignOutAlt} from 'react-icons/fa';
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { logout, reset } from './auth/authSlice';
+import { logout, reset } from '../features/auth/authSlice';
 
 const Navigation = () => {
 

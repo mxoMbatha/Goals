@@ -1,31 +1,38 @@
 import React, { useEffect ,useState} from 'react'
 import { useDispatch, useSelector} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import Qoutes from '../features/Qoutes';
+import Qoutes from '../components/Qoutes';
 import { FaBars,FaTimes } from 'react-icons/fa';
-import SetGoalForm from '../features/SetGoalForm';
-import { getGoals,reset } from '../features/goal/goalSlice';
+import SetGoalForm from '../components/SetGoalForm';
+import { getGoals, reset } from '../features/goal/goalSlice';
+import Spinner from '../components/Spinner';
+import Goal from '../components/Goal'
 const Dashboard = () =>
 {
-  const dispatch=useDispatch
+  const dispatch=useDispatch()
   const navigate = useNavigate();
   const { user } = useSelector((state) => state.auth);
-  const {goals,isLoading,isError,message}=useSelector((state)=>state.goals)
+  const {goals,isLoading,isError,message}=useSelector((state) => state.goal)
   const [displaySet,setDisplaySet]=useState(false)
 
   useEffect(() =>
   {
-    if (isError) (
+    if (isError) {
       console.log(message)
-    )
+    }
     if (!user) {
     navigate('/login');
     }
+    dispatch(getGoals())
     return () =>
     {
        dispatch(reset())
      }  
-  }, [navigate, user,isError,message,dispatch]);  
+  }, [navigate, user, isError, message, dispatch]);  
+  
+  if (isLoading) {
+  return <Spinner/>
+}
 
   const onDisplaySet = () => { setDisplaySet(!displaySet); }
   return (
@@ -44,7 +51,16 @@ const Dashboard = () =>
             </div>
             <div className="sm:container rounder p-2">
          { displaySet && <SetGoalForm onDisplaySet={onDisplaySet}/>}
-        </div>
+            </div>
+            <div className="sm:container">
+              { goals.length > 0 ? (
+                <div className="goals">
+                  { goals.map((goal) => (
+                    <Goal key={ goal._id } goal={ goal }/>
+                  ))}
+                </div>
+              ) : (<h3>you have no set goals yet</h3>)}
+            </div>
           </div>
         </div>
         

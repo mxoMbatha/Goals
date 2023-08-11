@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { setGoal } from './goal/goalSlice'
+import { setGoal } from '../features/goal/goalSlice'
 const SetGoalForm = ({onDisplaySet}) =>
 {
   const [text, setGoaltext] = useState('');
